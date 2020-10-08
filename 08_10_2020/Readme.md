@@ -1,1 +1,3 @@
-# CodeKata problems under "Math" category
+# CodeKata problems
+
+## 5 Easy Problems - Math Category
