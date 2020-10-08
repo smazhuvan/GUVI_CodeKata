@@ -1,0 +1,44 @@
+
+/* 
+
+You are given with a number A i.e. the temperature in Celcius. Write a program to convert this into Fahrenheit. 
+
+Note: In case of decimal values, round-off to two decimal places.
+
+Input Description:
+A number is provided in Celcius as the input of the program.
+
+Output Description:
+The output shall be the temperature converted into Fahrenheit corresponding to the input value print up to two decimal places and round off if required.
+
+Sample Input :
+12
+Sample Output :
+53.60
+
+*/
+
+
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  //console.log(data);
+  userInput.push(data);
+});
+inp.on("close", () => {
+    
+    var cel = userInput[0].split(" ");
+    
+    var far = +cel[0] * (9/5) + 32;
+              
+    console.log(far.toFixed(2));
+    
+});
