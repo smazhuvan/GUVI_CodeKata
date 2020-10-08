@@ -1,1 +1,2 @@
-## CodeKata problems under "String" category
+## CodeKata problems
+### 5 Easy Problems - String Category
