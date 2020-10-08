@@ -1,1 +1,1 @@
-# CodeKata problems under "String" category
+# CodeKata problems under "Math" category
