@@ -17,8 +17,6 @@ Sample Output :
 
 // Solution
 
-
-
 var inpArr = userInput[0].split("");
 
 for(i=0; i<inpArr.length; i++){
