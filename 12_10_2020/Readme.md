@@ -1,1 +1,3 @@
 ## CodeKata Solutions
+
+### Reformatting Code
