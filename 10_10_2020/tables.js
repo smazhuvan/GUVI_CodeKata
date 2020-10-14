@@ -17,27 +17,10 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
+var num = userInput[0];
+var threeMul = [];
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  var num = userInput[0];
-  var a = [];
- 
- for(i=1;i<=3;i++){
-     
-     a[i] = i * num;
-    
- }
- console.log(a.join(" ").trim())
-});
+for(i=1; i<=3; i++)
+  threeMul[i] = i * num;
+  
+ console.log(threeMul.join(" ").trim())
