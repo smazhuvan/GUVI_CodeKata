@@ -9,20 +9,5 @@ OUTPUT
 2
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
- var a =+ userInput[0], b = a.toString(2);
-  console.log(b.length - b.lastIndexOf(1));
-});
+var ip =+ userInput[0], bin = ip.toString(2);
+console.log(bin.length - bin.lastIndexOf(1));
