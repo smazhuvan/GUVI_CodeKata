@@ -11,34 +11,25 @@ OUTPUT
 2 3
 */
 
-// Getting input via STDIN
-const readline = require("readline");
+var a = parseInt(userInput[0]), buffer = [], resArr = [];
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  var a=parseInt(userInput[0]),f=[],arr=[];
-  for(var i=1;i<=a;i++)
-    if(a%i===0)
-      f.push(i);
+for(i = 1; i <= a; i++) {
+  if(a%i === 0)
+    buffer.push(i);
+  
   function isPrime(num) {
-    if(num < 2) return false;
-    for (var i = 2; i < num; i++) {
-        if(num%i==0)
-            return false;
+    if(num < 2) 
+      return false;
+    
+    for (i = 2; i < num; i++) {
+      if(num%i == 0)
+        return false;
     }
     return true;
 }
-for(var i = 0; i < f.length; i++){
-    if(isPrime(parseInt(f[i]))) arr.push(f[i]);
+  
+for(i = 0; i < buffer.length; i++){
+    if(isPrime(parseInt(buffer[i])))
+      resArr.push(buffer[i]);
 }
-  console.log(arr.join(" "));
-});
+  console.log(resArr.join(" "));
