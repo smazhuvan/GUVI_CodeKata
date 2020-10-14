@@ -17,35 +17,19 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
+var num = userInput[0];
  
- var num = userInput[0];
- 
- if(num >= 1 && num <= 12){
-     if(num === 2){
+if(num >= 1 && num <= 12){
+  
+  if(num === 2)
      console.log(28);
- }
- else if(num % 2 != 0 || num == 8){
+  
+  else if(num % 2 != 0 || num == 8)
      console.log(31);
- }
- else
+  
+  else
      console.log(30);
- }
- else
- {
+}
+
+else
      console.log("Error");
- }
-});
