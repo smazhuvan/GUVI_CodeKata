@@ -6,9 +6,11 @@ If no such numbers are present print '-1' without quotes.
 Input Size : 1 <= n <= 100000
 
 Sample Testcases :
+
 INPUT
 6
 6 7 3 3 4 5
+
 OUTPUT
 3 4 5
 */
