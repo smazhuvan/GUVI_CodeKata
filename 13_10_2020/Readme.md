@@ -1,3 +1,4 @@
 ## CodeKata Solutions
 
-### Reformatting Code
+### 5 Medium Problems - Array category
+
