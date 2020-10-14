@@ -11,22 +11,5 @@ OUTPUT
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-
-  var num = userInput[0].split(" ").map(Number);
-  console.log((num[0]*num[2])+num[1]);
-
-});
+var num = userInput[0].split(" ").map(Number);
+console.log((num[0]*num[2])+num[1]);
