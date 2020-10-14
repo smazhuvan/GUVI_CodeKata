@@ -16,33 +16,17 @@ OUTPUT
 354
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  var a = userInput[0].split("");
- var len = a.length;
+ var a = userInput[0].split("");
+ var aLen = a.length;
  var a1 = userInput[0].split(" ");
- var b = [];
+ var buffer = [];
 
- for( i = 0; i < len; i++){
-     b[i] = Math.pow(a[i],len);
+ for(i = 0; i < aLen; i++){
+     buffer[i] = Math.pow(a[i],aLen);
  }
 
- var sum = b.reduce(function(a, b){
+ var sum = buffer.reduce(function(a, b){
         return a + b;
     }, 0);
 
-
  console.log(sum);
-});
