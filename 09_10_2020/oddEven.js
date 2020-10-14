@@ -19,34 +19,11 @@ Even
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
+var ip = userInput[0].split(" ");
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  //console.log(data);
-  userInput.push(data);
-});
-inp.on("close", () => {
-    
-    var ip = userInput[0].split(" ");
-    
-    if(ip % 2 == 0)
-    {
-        console.log("Even");
-    }
-    else if(ip == 0)
-    {
-        console.log("Zero");
-    }
-    else
-    {
-        console.log("Odd")
-    }
-    
-});
+if(ip % 2 == 0)
+  console.log("Even");
+else if(ip == 0)
+  console.log("Zero");
+else
+  console.log("Odd");
