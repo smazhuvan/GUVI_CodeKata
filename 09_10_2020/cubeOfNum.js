@@ -15,21 +15,7 @@ Sample Output :
 
 */
 
-const readline = require("readline");
-const userInput = [];
+var N = userInput[0];
+console.log(Math.pow(+N,3))
 
-const inp = readline.createInterface({
-    input: process.stdin
-});
-
-inp.on("line",(data) => {
-    userInput.push(data);
-});
-
-inp.on("close",() => {
-    
-    var N = userInput[0];
-    
-    console.log(Math.pow(+N,3))
-});
 
