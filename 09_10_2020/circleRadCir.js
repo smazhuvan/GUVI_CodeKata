@@ -17,27 +17,11 @@ Sample Output :
 
 */
 
-const readline = require("readline");
-
-const inp = readline.createInterface({
-   input: process.stdin 
-});
-
-const userinput = [];
-
-inp.on("line", (data)=>{
-   userinput.push(data); 
-});
-
-inp.on("close", ()=>{
+var radius = userinput[0];
    
-   var rad = userinput[0];
-   
-   if(rad < 0){
-       console.log("Error");
-   }
-   else{
-       var circ = (2 * (22/7) * rad);
-       console.log(circ.toFixed(2));
-   }
-});
+if(radius < 0)
+   console.log("Error");
+else
+   var circumference = (2 * (22/7) * radius);
+
+console.log(circumference.toFixed(2));
