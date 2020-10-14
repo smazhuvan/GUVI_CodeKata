@@ -17,30 +17,11 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-    
-   var num = userInput[0];
+var num = userInput[0];
    
-   if(num < 0){
-       console.log("Error");
-   }
-   else if(num === 0){
-       console.log(0);
-   }
-   else{
-       console.log(Math.pow(num,2));
-   }
-});
+if(num < 0)
+  console.log("Error");
+else if(num === 0)
+  console.log(0);
+else
+  console.log(Math.pow(num,2));
