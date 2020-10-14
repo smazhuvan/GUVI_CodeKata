@@ -21,33 +21,15 @@ Sample Output :
 
 // Solution:
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-
-var str = userInput[0];
-var vow = /[aeiouAEIOU]/g;
+var inpStr = userInput[0];
+var regExVow = /[aeiouAEIOU]/g; //Regex Vowel 
 var str1 = "";
 var str2 = "";
 
-  for(i=0; i<a.length; i++){
-    if(str[i].match(vow))
-    str1 += str[i];
-    else
-    str2 += str[i];
-  }
-
-  console.log(str2);
-  
-});
+for(i=0; i<inpStr.length; i++){
+ if(inpStr[i].match(regExVow))
+  str1 += str[i];
+ else
+   str2 += str[i];
+}
+console.log(str2);
