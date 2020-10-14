@@ -16,18 +16,18 @@ OUTPUT
 
 var inpSize = +userInput[0];
 var numSeries = userInput[1].split(" ").map(Number);
-var result = [], c = 0;
+var result = [], flag = 0;
  
  for(i=0; i<inpSize; i++){
      for(j=0; j<i; j++){
          if(numSeries[i]===numSeries[j]){
              result.push(i);
-             c = 1
+             flag = 1
             }
      }
  }
  
- if(c === 1)
+ if(flag === 1)
  console.log(1);
  else
  console.log("unique");
