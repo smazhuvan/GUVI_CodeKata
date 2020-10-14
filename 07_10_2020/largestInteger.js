@@ -19,27 +19,12 @@ Sample Output :
 
 // Solution
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-
-var str = userInput[0].split(" ").map(Number);
+var inpStr = userInput[0].split(" ").map(Number);
 var num = 0;
 
-for (i=0; i < str.length; i++){
-    if (str[i] > num) {
-        num = str[i];
+for (i=0; i < inpStr.length; i++){
+    if (inpStr[i] > num) {
+        num = inpStr[i];
     }
 }
 console.log(num);
