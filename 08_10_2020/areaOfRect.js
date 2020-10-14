@@ -18,27 +18,8 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
+var length = userInput[0].split(" ");
+var breadth = userInput[1].split(" ");
+var area = +length[0] * +breadth[0];
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  //console.log(data);
-  userInput.push(data);
-});
-inp.on("close", () => {
-    
-    var length = userInput[0].split(" ");
-    
-    var breadth = userInput[1].split(" ");
-
-    var area = +length[0] * +breadth[0];
-              
-    console.log(area);
-    
-});
+console.log(area);
