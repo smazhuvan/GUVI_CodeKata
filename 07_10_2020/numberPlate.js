@@ -21,23 +21,9 @@ Sample Output :
 
 // Solution
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-   var a = userInput[0].split("").map(Number);
-   var ans = a.filter(a=>a>0)
-   var sum = ans.reduce(function(a, b){
+   var numPlate = userInput[0].split("").map(Number);
+   var expOp = numPlate.filter(numPlate => numPlate > 0)
+   var sum = expOp.reduce(function(a, b){
         return a + b;
     }, 0);
 
