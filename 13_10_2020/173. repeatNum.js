@@ -5,9 +5,11 @@ If no numbers are repeated print "unique".
 Input Size : 1 <= N <= 100000
 
 Sample Testcase :
+
 INPUT
 7
 1 2 3 2 3 4 3
+
 OUTPUT
 2 3
 */
