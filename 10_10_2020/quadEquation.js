@@ -26,31 +26,13 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-    
-  var num = userInput[0].split(" ");
+var num = userInput[0].split(" ");
   
-  var a = num[0];
-  var b = num[1];
-  var c = num[2];
+var a = num[0];
+var b = num[1];
+var c = num[2];
+var sq = Math.sqrt(b*b-(4*a*c)); // Square root part
+var de = 2 * a; // Denominator
   
-  var sq = Math.sqrt(b*b-(4*a*c));
-  var de = 2 * a;
-  
-  console.log(((-b + sq)/ de).toFixed(2));
-  console.log(((-b - sq) / de).toFixed(2));
-  
-});
+console.log(((-b + sq)/ de).toFixed(2));
+console.log(((-b - sq) / de).toFixed(2));
