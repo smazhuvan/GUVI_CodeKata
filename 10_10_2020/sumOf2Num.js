@@ -18,26 +18,9 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
+var ip1 = userInput[0];
+var ip2 = userInput[1];
+var sum = +ip1 + +ip2;
 
-const userInput = [];
-
-inp.on("line", (data) => {
-  //console.log(data);
-  userInput.push(data);
-});
-inp.on("close", () => {
-    
-    var ip1 = userInput[0];
-    var ip2 = userInput[1];
-    
-    var ip3 = +ip1 + +ip2;
-    console.log(+ip3);
-    
-});
-
+console.log(+sum);
