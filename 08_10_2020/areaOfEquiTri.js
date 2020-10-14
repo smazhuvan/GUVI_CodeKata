@@ -15,25 +15,7 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  //console.log(data);
-  userInput.push(data);
-});
-inp.on("close", () => {
-    
-    var side = userInput[0].split(" ");
-    
-    var area = ((Math.sqrt(3)/4) * (Math.pow(+side,2)));
+var side = userInput[0].split(" ");
+var area = ((Math.sqrt(3)/4) * (Math.pow(+side,2)));
               
-    console.log(area.toFixed(2));
-    
-});
+console.log(area.toFixed(2));
