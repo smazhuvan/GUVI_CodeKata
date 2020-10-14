@@ -18,27 +18,7 @@ Sample Output :
 
 */
 
-
-
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  //console.log(data);
-  userInput.push(data);
-});
-inp.on("close", () => {
-    
-    var cel = userInput[0].split(" ");
-    
-    var far = +cel[0] * (9/5) + 32;
+var cel = userInput[0].split(" ");
+var far = +cel[0] * (9/5) + 32;
               
-    console.log(far.toFixed(2));
-    
-});
+console.log(far.toFixed(2));
