@@ -20,34 +20,14 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
-
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-    
-  var N = userInput[0];
- var a =[];
+var N = userInput[0];
+var resArr =[];
  
- if (N === 0){
-     console.log("NULL");
- }
- else
- {
-     for(i=1; i<=N; i++)
-    
-     a[i] = i * 9;
-     console.log(a.join(" ").trim())
-     
- }
-  
-});
+if (N === 0)
+  console.log("NULL");
+
+else{
+  for(i=1; i<=N; i++)
+    resArr[i] = i * 9;
+  console.log(resArr.join(" ").trim())   
+}
