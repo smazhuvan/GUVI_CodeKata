@@ -15,29 +15,10 @@ Sample Output :
 
 */
 
-// Getting input via STDIN
-const readline = require("readline");
+var N = userInput[0].split(" ");
+var factorial = parseInt(N);
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
+for(i = factorial-1; i >= 1; i --)
+  factorial = factorial * i;
 
-const userInput = [];
-
-inp.on("line", (data) => {
-  //console.log(data);
-  userInput.push(data);
-});
-inp.on("close", () => {
-    
-    var a = userInput[0].split(" ");
-    var b = parseInt(a);
-
-    for(i = b-1; i >= 1; i --)
-        {
-            b = b * i;
-        }
-
-console.log(b);
-    
-});
+console.log(factorial);
