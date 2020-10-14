@@ -9,27 +9,18 @@ OUTPUT
 yes
 */
 
-// Getting input via STDIN
-const readline = require("readline");
+var a = userInput[0].split(""), flag = 0;
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
+for(i=0; i<a.length; i++){
+  for(j=0; j<a.length; j++){
+    if(i!==j && a[i]===a[j]){
+      flag=1;
+      break;
+    }
+  }
+}
 
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
-  var a=userInput[0].split(""),c=0;
-
-  for(var i=0;i<a.length;i++)
-    for(var j=0;j<a.length;j++)
-
-      if(i!==j && a[i]===a[j]){c=1;break;}
-
-  if(c===1)console.log("yes");
-  else console.log("no");
-});
+if(flag === 1)
+  console.log("yes");
+else
+  console.log("no");
