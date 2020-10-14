@@ -14,26 +14,9 @@ Sample Output :
 1
 
 */
-
-const readline = require("readline");
-
-const inp = readline.createInterface({
-    input:process.stdin
-})
-
-const userInput = [];
-
-inp.on("line",(data)=>{
-   userInput.push(data); 
-});
-
-inp.on("close",()=>{
-   var num = userInput[0].split(" ");
+var num = userInput[0].split(" ");
    
-   if(num[0] > num[1]){
-       console.log(num[1]);
-   }
-   else{
-       console.log(num[0]);
-   }
-});
+if(num[0] > num[1])
+    console.log(num[1]);
+else
+    console.log(num[0]);
