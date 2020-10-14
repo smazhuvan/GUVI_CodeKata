@@ -13,25 +13,9 @@ yes
 
 // Solution:
 
-// Getting input via STDIN
-const readline = require("readline");
+var inpStr = userInput[0].split("");
 
-const inp = readline.createInterface({
-  input: process.stdin
-});
-
-const userInput = [];
-
-inp.on("line", (data) => {
-  userInput.push(data);
-});
-
-inp.on("close", () => {
- var str = userInput[0].split("");
-
-     if (str[0] == 'a' || str[1] == 'e' || str[2] == 'i' || str[3] == 'o' || str[4] == 'u')
-     console.log("yes")
-     else
-     console.log("no")
-
-});
+if (inpStr[0] == 'a' || inpStr[1] == 'e' || inpStr[2] == 'i' || inpStr[3] == 'o' || inpStr[4] == 'u')
+  console.log("yes")
+else
+  console.log("no")
