@@ -1,3 +1,3 @@
 ## CodeKata Solutions
 
-### 5 Medium Problem - String Category
+### 5 Easy/Medium Problem - String Category
