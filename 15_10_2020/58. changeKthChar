@@ -1,0 +1,18 @@
+/*
+Given a string and a number K, change every kth character to uppercase from beginning in string.
+Sample Testcase :
+INPUT
+string 2
+OUTPUT
+sTrInG
+*/
+
+var str = userInput[0].split(" ");
+a = str[0];
+k = parseInt(str[1]);
+res = "";
+for (var i = 0; i < a.length; i++) {
+    if ((i + 1) % k === 0) res += str[0][i].toUpperCase();
+    else res += a[i];
+}
+console.log(res);
